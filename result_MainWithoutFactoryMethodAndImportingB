@@ -1,0 +1,9 @@
+$ java -Xbatch -XX:+UnlockDiagnosticVMOptions -XX:+PrintCompilation -XX:+PrintInlining org.komamitsu.tptest.MainWithoutFactoryMethodAndImportingB
+     62    1    b        java.lang.String::hashCode (55 bytes)
+     72    2    b        java.lang.String::indexOf (70 bytes)
+                            @ 66   java.lang.String::indexOfSupplementary (71 bytes)   too big
+     82    3    b        org.komamitsu.tptest.child.ChildImplA::exec (11 bytes)
+     83    4 %  b        org.komamitsu.tptest.MainWithoutFactoryMethodAndImportingB::main @ 10 (41 bytes)
+                            @ 17   org.komamitsu.tptest.child.ChildImplA::exec (11 bytes)   inline (hot)
+     85    4 %           org.komamitsu.tptest.MainWithoutFactoryMethodAndImportingB::main @ -2 (41 bytes)   made not entrant
+10000000
