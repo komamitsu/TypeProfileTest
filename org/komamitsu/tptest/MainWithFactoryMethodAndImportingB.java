@@ -3,7 +3,7 @@ import org.komamitsu.tptest.child.Child;
 import org.komamitsu.tptest.child.ChildImplA;
 import org.komamitsu.tptest.child.ChildImplB;
 
-public class Main {
+public class MainWithFactoryMethodAndImportingB {
     public static void main(String argv[]) {
         Child c = createChild();
         for (int i = 0; i < 10000000; i++) {
